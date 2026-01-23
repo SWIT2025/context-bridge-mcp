@@ -1,6 +1,6 @@
 {
   "name": "@elkraps/context-bridge",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MCP server to bridge local documentation context to LLMs",
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@cedrugs/pdf-parse": "^1.0.0",
     "@modelcontextprotocol/sdk": "^1.25.3",
     "glob": "^13.0.0",
     "mammoth": "^1.11.0",

@@ -1,10 +1,10 @@
 import { parse as parsePdf } from '../../src/domain/pdf';
 import { parse as parseDocx } from '../../src/domain/docx';
-import pdf from 'pdf-parse';
+import pdf from '@cedrugs/pdf-parse';
 import mammoth from 'mammoth';
 
 // Mock libraries
-jest.mock('pdf-parse', () => jest.fn());
+jest.mock('@cedrugs/pdf-parse', () => jest.fn());
 jest.mock('mammoth');
 
 describe('Parsers', () => {

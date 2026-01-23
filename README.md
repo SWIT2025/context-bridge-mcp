@@ -2,6 +2,12 @@
   <img src="./assets/logo.png" width="200" height="200" style="border-radius: 50%;" alt="Context Bridge Logo">
 </p>
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/@elkraps/context-bridge">
+    <img src="https://img.shields.io/npm/v/%40elkraps%2Fcontext-bridge?color=blue" alt="NPM Version">
+  </a>
+</p>
+
 # Context Bridge MCP
 
 Context Bridge is a Model Context Protocol (MCP) server designed to provide Large Language Models (LLMs) with secure, read-only access to local documentation. It acts as an intermediary layer, allowing agents to scan directories, search for keywords, and extract content from PDF, DOCX, Markdown, and plain text files directly from the host filesystem.
@@ -14,6 +20,20 @@ This tool resolves the context isolation problem by enabling agents to reference
 - **Content Extraction:** parse and extract text from binary formats (PDF, DOCX) and text-based formats (Markdown, TXT).
 - **Semantic Search:** perform keyword-based search across multiple files to locate relevant information snippets.
 - **Safety:** operates in read-only mode to prevent accidental data modification.
+
+## Available Tools
+
+- **list_documents**: Scans a directory for supported files (PDF, DOCX, MD, TXT).
+  - `path` (string, optional): Absolute path to the directory. Defaults to current.
+  - `recursive` (boolean, optional): Enable subdirectory scanning.
+
+- **read_document**: Extracts text content from a file. Handles binary conversion automatically.
+  - `path` (string, required): Absolute path to the file.
+
+- **search_documents**: Performs case-insensitive keyword search with context snippets.
+  - `query` (string, required): Search term.
+  - `path` (string, optional): Directory scope.
+  - `recursive` (boolean, optional): Enable subdirectory search.
 
 ## Getting Started
 
@@ -62,7 +82,13 @@ Configure your MCP client to run the server directly via npx:
 
 ## Usage
 
-To effectively utilize this tool, you must explicitly direct the agent to interface with the local documentation using the **context-bridge** terminology. It is recommended to provide the absolute path to the target documentation directory.
+To effectively utilize this tool, you must explicitly direct the agent to interface with the local documentation using the **context-bridge** terminology.
+
+### System Prompt Configuration
+
+To ensure the agent prioritizes this MCP server over generic shell commands (like `ls` or `cat`), add the following instruction to your System Prompt, `.cursorrules`, or custom instructions:
+
+> "You have access to local documentation via the `context-bridge` tools. ALWAYS use `list_documents`, `read_document`, and `search_documents` to explore, read, or search files. Do not use shell commands for documentation tasks."
 
 ### Interaction Examples
 
