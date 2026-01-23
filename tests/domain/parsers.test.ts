@@ -4,13 +4,8 @@ import pdf from 'pdf-parse';
 import mammoth from 'mammoth';
 
 // Mock libraries
-jest.mock('pdf-parse', () => ({
-    __esModule: true,
-    default: jest.fn()
-}));
+jest.mock('pdf-parse', () => jest.fn());
 jest.mock('mammoth');
-
-import pdf from 'pdf-parse';
 
 describe('Parsers', () => {
     describe('PDF Parser', () => {

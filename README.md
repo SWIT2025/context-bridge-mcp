@@ -47,8 +47,6 @@ This tool resolves the context isolation problem by enabling agents to reference
 
 ### NPX Usage
 
-*Note: This method requires the package to be published to the npm registry.*
-
 Configure your MCP client to run the server directly via npx:
 
 ```json
@@ -56,7 +54,7 @@ Configure your MCP client to run the server directly via npx:
   "mcpServers": {
     "context-bridge": {
       "command": "npx",
-      "args": ["-y", "context-bridge"]
+      "args": ["-y", "@elkraps/context-bridge"]
     }
   }
 }

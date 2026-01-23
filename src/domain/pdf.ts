@@ -1,4 +1,4 @@
-import PdfParse from 'pdf-parse';
+const pdf = require('pdf-parse');
 
 /**
  * Parses PDF.
@@ -7,6 +7,10 @@ import PdfParse from 'pdf-parse';
  * @returns Text.
  */
 export async function parse(buffer: Buffer): Promise<string> {
-    const data = await (PdfParse as any)(buffer);
-    return data.text;
+    try {
+        const data = await pdf(buffer);
+        return data.text;
+    } catch (error) {
+        throw new Error(`Failed to parse PDF: ${error instanceof Error ? error.message : String(error)}`);
+    }
 }

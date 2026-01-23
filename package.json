@@ -1,6 +1,6 @@
 {
   "name": "@elkraps/context-bridge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server to bridge local documentation context to LLMs",
   "repository": {
     "type": "git",
