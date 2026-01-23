@@ -2,6 +2,10 @@
   "name": "@elkraps/context-bridge",
   "version": "1.0.0",
   "description": "MCP server to bridge local documentation context to LLMs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elkraps/context-bridge-mcp.git"
+  },
   "main": "build/index.js",
   "bin": {
     "context-bridge": "./build/index.js"
