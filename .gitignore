@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build
+build/
+dist/
+
+# Documentation
+docs/
+
+# Environment
+.env
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+
+# OS files
+.DS_Store
+.idea
